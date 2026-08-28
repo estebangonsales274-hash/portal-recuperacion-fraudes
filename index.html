@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Oficial de Reporte de Fraudes y Delitos Financieros | México</title>
+    <style>
+        :root {
+            --primary-color: #0c2340;
+            --secondary-color: #0284c7;
+            --accent-color: #dc2626;
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-color: #0f172a;
+            --border-color: #cbd5e1;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 35px 25px;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .legal-notice {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 18px 20px;
+            margin: 25px 25px 10px 25px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.88rem;
+            color: #1e40af;
+        }
+
+        .legal-notice strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        form {
+            padding: 25px;
+        }
+
+        .fieldset-group {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #fafafa;
+        }
+
+        legend {
+            font-weight: 700;
+            color: var(--primary-color);
+            padding: 0 10px;
+            font-size: 1.05rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea,
+        input[type="file"] {
+            padding: 11px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background-color: #ffffff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .file-hint {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+        }
+
+        .btn-submit:hover {
+            background-color: #b91c1c;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.99);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid var(--border-color);
+            background-color: #f8fafc;
+        }
+
+        @media (max-width: 650px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Portal Único de Reclamaciones Financieras</h1>
+        <p>Sistema Nacional de Atención e Impugnación de Fraudes Bancarios en México</p>
+    </header>
+
+    <div class="legal-notice">
+        <strong>Marco Legal de Protección al Usuario Financiero:</strong>
+        Este portal opera en cumplimiento de la <em>Ley de Protección y Defensa al Usuario de Servicios Financieros</em> (Artículos 68 y concordantes), garantizando el derecho del usuario a presentar reclamaciones por operaciones no reconocidas ante la CONDUSEF y las instituciones bancarias de México. Toda la información recabada se encuentra protegida bajo la <em>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</em>.
+    </div>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+        
+        <!-- DATOS DEL AFECTADO -->
+        <fieldset class="fieldset-group">
+            <legend>1. Datos de Identificación del Solicitante</legend>
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre_completo" placeholder="Ej. Juan Carlos Pérez López" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento *</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="foto_id">Fotografía de Identificación Oficial (INE / Pasaporte) *</label>
+                    <input type="file" id="foto_id" name="foto_identificacion" accept="image/*,.pdf" required>
+                    <span class="file-hint">Suba una imagen clara de su identificación oficial.</span>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- INFORMACIÓN BANCARIA Y MONTO -->
+        <fieldset class="fieldset-group">
+            <legend>2. Información Bancaria e Incidencia</legend>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="banco">Banco / Institución Financiera Afectada *</label>
+                    <select id="banco" name="banco_afectado" required>
+                        <option value="">Seleccione su banco</option>
+                        <option value="bbva">BBVA México</option>
+                        <option value="banorte">Banorte</option>
+                        <option value="santander">Santander México</option>
+                        <option value="citibanamex">Citibanamex</option>
+                        <option value="hsbc">HSBC México</option>
+                        <option value="scotiabank">Scotiabank México</option>
+                        <option value="azteca">Banco Azteca</option>
+                        <option value="otra">Otra institución / SOFIPO / Fintech</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="monto">Monto Perdido (Pesos Mexicanos MXN) *</label>
+                    <input type="number" id="monto" name="monto_perdido" step="0.01" placeholder="$0.00 MXN" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="extracto">Extracto / Estado de Cuenta Bancario *</label>
+                    <input type="file" id="extracto" name="extracto_bancario" accept=".pdf,image/*" required>
+                    <span class="file-hint">Adjunte su estado de cuenta (PDF o foto) resaltando el movimiento no reconocido.</span>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- DECLARACIÓN Y PRUEBAS -->
+        <fieldset class="fieldset-group">
+            <legend>3. Declaración de Hechos y Evidencias del Fraude</legend>
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label for="descripcion">¿Cómo ocurrió la estafa / fraude? *</label>
+                    <textarea id="descripcion" name="descripcion_hechos" placeholder="Escriba detalladamente cómo sucedió el evento (ej. llamadas de suplantación, mensajes SMS falsos, enlaces engañosos, transferencias SPEI no autorizadas, compras no reconocidas, etc.)." required></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <label for="pruebas">Fotos y Capturas de Pruebas de la Estafa (Múltiples archivos) *</label>
+                    <input type="file" id="pruebas" name="pruebas_estafa[]" accept="image/*,.pdf" multiple required>
+                    <span class="file-hint">Puede seleccionar varios archivos a la vez (capturas de chats de WhatsApp, folios SPEI, correos falsos, etc.).</span>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- BOTÓN DE ENVÍO -->
+        <button type="submit" class="btn-submit">Enviar Reporte de Fraude</button>
+    </form>
+
+    <footer>
+        <p>© Portal de Reclamaciones Bancarias de México. Formulario formal ajustado a la normativa vigente de CONDUSEF y CNBV.</p>
+    </footer>
+</div>
+
+</body>
+</html>
